@@ -1,0 +1,4 @@
+[submodule "mey-protobuf"]
+	path = mey-protobuf
+	url = https://github.com/meeypioneer/mey-protobuf
+	branch = master
