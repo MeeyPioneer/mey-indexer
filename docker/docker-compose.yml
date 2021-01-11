@@ -1,6 +1,13 @@
 version: '2.1'
 
 services:
+  elasticsearch:
+    image: 'docker.io/bitnami/elasticsearch:7-debian-10'
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    volumes:
+      - 'elasticsearch_data:/bitnami/elasticsearch/data'
   mariadb:
     image: 'docker.io/bitnami/mariadb:10.5-debian-10'
     ports:
@@ -18,4 +25,6 @@ services:
 
 volumes:
   mariadb_data:
+    driver: local
+  elasticsearch_data:
     driver: local
