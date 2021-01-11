@@ -97,4 +97,8 @@ Requires Go Modules (`GO111MODULE=on`)
     docker build -t meycoin/indexer .
     docker run meycoin/indexer indexer -A ip:7845 -E ip:9200 --prefix chain_
 
+## Connect MeyCoin Testnet
+
+    ./bin/indexer --host 174.138.30.68 --port 7845 --prefix mey_ --dbtype mariadb --dburl "root@tcp(127.0.0.1:3306)/meychain"
+
 [Automatic latest build from master on Docker Hub](http://hub.docker.com/r/meycoin/indexer)
