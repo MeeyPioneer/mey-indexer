@@ -51,6 +51,7 @@ type EsTx struct {
 	AmountFloat float32             `json:"amount_float" db:"amount_float"` // float for sorting
 	Type        string              `json:"type" db:"type"`
 	Category    category.TxCategory `json:"category" db:"category"`
+	Payload    	string 				`json:"payload" db:"payload"`
 }
 
 // EsName is a name-address mapping stored in the database

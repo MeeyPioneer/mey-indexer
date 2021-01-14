@@ -98,6 +98,7 @@ func (ns *Indexer) ConvTx(tx *types.Tx, blockNo uint64) doc.EsTx {
 		AmountFloat: bigIntToFloat(amount, 18),
 		Type:        fmt.Sprintf("%d", tx.Body.Type),
 		Category:    category.DetectTxCategory(tx),
+		Payload: 	 string(tx.GetBody().Payload),
 	}
 	return doc
 }
